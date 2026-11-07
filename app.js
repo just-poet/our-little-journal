@@ -107,7 +107,6 @@ function render(){
   previousButtons.forEach(b=>b.disabled=pageIndex===0);
   const last=end>=pages.length;nextButtons.forEach(b=>b.disabled=last);
   document.getElementById('ending-invitation').hidden=!last;
-  document.getElementById('reading-hint').hidden=last;
   try{localStorage.setItem('ammu-journal-page',String(pageIndex));}catch{}
 }
 function goTo(index,animate=true){
