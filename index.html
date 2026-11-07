@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#203f3b">
+  <meta name="description" content="A little journal of favourite moments. For Ammu.">
+  <title>Our little journal · For Ammu</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23d9bd83' d='M3 8h11v2h4V8h11v17H18v2h-4v-2H3z'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="scenery.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <canvas id="landscape" role="img" aria-label="Hand-drawn pixel scenery of a quiet moonlit lake, willow branches, and fireflies"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+  <header class="topbar"><a class="brand" href="#journal"><span class="book-symbol" aria-hidden="true"></span><span>LITTLE JOURNAL</span></a><span class="dedication">a place for all little moments <span aria-hidden="true">✦</span></span><button id="contents-toggle" class="contents-button" aria-expanded="false" aria-controls="contents"><span aria-hidden="true">☷</span> Chapters</button></header>
+  <main>
+    <section id="journal-view" aria-labelledby="journal-title">
+      <div class="opening"><p class="eyebrow"><span></span> FOR MY FAVOURITE PERSON <span></span></p><h1 id="journal-title">Our little <em>journal.</em></h1></div>
+      <div class="reading-area">
+        <button id="previous-side" class="side-arrow previous" aria-label="Previous pages">←</button>
+        <div class="book-wrap">
+          <div class="book-underlay" aria-hidden="true"></div>
+          <div id="book" class="book" aria-label="Journal book">
+            <article id="page-left" class="page page-left"><div class="page-running"><span>OUR LITTLE JOURNAL</span><span class="running-star" aria-hidden="true">✧</span></div><div class="page-body"></div><div class="page-footer"><span class="page-date"></span><span class="page-number"></span></div></article>
+            <article id="page-right" class="page page-right"><div class="page-running"><span>KEPT CLOSE TO MY HEART</span><span class="running-star" aria-hidden="true">✧</span></div><div class="page-body"></div><div class="page-footer"><span class="page-date"></span><span class="page-number"></span></div></article>
+            <div class="book-spine" aria-hidden="true"></div><div class="ribbon" aria-hidden="true"></div>
+            <div id="turning-leaf" class="turning-leaf" aria-hidden="true"></div>
+          </div>
+        </div>
+        <button id="next-side" class="side-arrow next" aria-label="Next pages">→</button>
+      </div>
+      <nav class="book-controls" aria-label="Page navigation"><button id="previous" class="text-arrow"><span aria-hidden="true">←</span> Previous</button><div class="progress-group"><span id="page-status" role="status" aria-live="polite">Opening your journal…</span><div class="progress-track"><div id="progress-fill"></div></div></div><button id="next" class="text-arrow">Next <span aria-hidden="true">→</span></button></nav>
+      <div id="ending-invitation" class="ending-invitation" hidden><span>I love youuu</span><button id="continue" class="continue-button">Continue <span aria-hidden="true">→</span></button></div>
+      <p class="reading-hint" id="reading-hint">Turn a page. Stay a little longer. <span aria-hidden="true">♡</span></p>
+      <div id="load-error" class="load-error" role="alert" hidden>Your journal couldn’t load. <button id="retry">Try again</button></div>
+    </section>
+    <section id="otter-view" class="otter-view" aria-labelledby="otter-title" hidden>
+      <p class="eyebrow">OUR OWN LITTLE CORNER OF THE LAKE</p>
+      <figure class="otter-scene"><div class="scene-label"><span aria-hidden="true">✦</span><span>TOGETHER, EVEN IN OUR DREAMS</span><span aria-hidden="true">✦</span></div><canvas id="otters" width="256" height="176" role="img" aria-label="Two sleepy otters floating on their backs in a lake, eyes closed and paws held together beneath the moon"></canvas><span class="scene-border top-left" aria-hidden="true"></span><span class="scene-border bottom-right" aria-hidden="true"></span></figure>
+      <h1 id="otter-title" class="pixel-dedication"><canvas id="pixel-title" width="72" height="9" aria-hidden="true"></canvas><span class="sr-only">you and us</span></h1>
+      <button id="return-to-journal" class="return-button">← <span>Back to our pages</span></button>
+      <span class="closing-heart" aria-hidden="true">♡</span>
+    </section>
+  </main>
+  <div class="contents-backdrop" id="contents-backdrop" hidden></div>
+  <aside class="contents" id="contents" aria-label="Journal chapters" hidden><div class="contents-head"><div><p class="eyebrow">FIND A MOMENT</p><h2>Between the pages</h2></div><button id="contents-close" aria-label="Close chapters">×</button></div><nav id="chapter-list" aria-label="Jump to an entry"></nav><p class="contents-note">Every page, a little piece of us.</p></aside>
+  <footer class="site-footer"><span>WRITTEN WITH LOVE</span><span class="footer-heart" aria-hidden="true">♥</span><span>KEPT FOR YOU</span></footer>
+</body>
+</html>
